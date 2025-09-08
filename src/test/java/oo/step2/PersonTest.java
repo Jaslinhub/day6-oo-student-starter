@@ -2,6 +2,7 @@ package oo.step2;
 
 import oo.Person;
 import oo.Student;
+import oo.Teacher;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,4 +17,9 @@ public class PersonTest {
     assertEquals("My name is Tom. I am 18 years old. I am a student.",student.introduce());
 }
     // when introduce a person of teacher then return message with name and age
+    @Test
+    void should_introduce_itself_when_given_a_person_of_teacher(){
+    Teacher teacher=new Teacher(1,"Jerry",21);
+        assertEquals("My name is Jerry. I am 21 years old. I am a teacher.",teacher.introduce());
+    }
 }
